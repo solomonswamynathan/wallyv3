@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">wallyv3</string>
+    <string name="internal_app_name">Wally</string>
+    <string name="welcome">Welcome back to your app</string>
+    <string name="register">Register</string>
+</resources>
