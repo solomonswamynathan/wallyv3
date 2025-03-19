@@ -2,7 +2,6 @@ package com.kyc.wallyv3
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -53,11 +52,11 @@ class HomeActivity : AppCompatActivity() {
                             binding.photoRecyclerView.adapter = photoAdapter
 
 
-//                            photoAdapter.onItemClick = {
-//                                val intent = Intent(this@HomeActivity,PhotoActivity::class.java)
-//                                intent.putExtra("photo", it)
-//                                startActivity(intent)
-//                            }
+                            photoAdapter.onItemClick = {
+                                val intent = Intent(this@HomeActivity, PhotoActivity::class.java)
+                                intent.putExtra("photo", it)
+                                startActivity(intent)
+                            }
 
                         } catch (e: JSONException) {
                             e.printStackTrace()
@@ -88,7 +87,7 @@ class HomeActivity : AppCompatActivity() {
                 .placeholder(R.drawable.ic_baseline_image_24)
                 .into(holder.photoImageView)
 
-            holder.itemView.setOnClickListener{
+            holder.itemView.setOnClickListener {
                 onItemClick?.invoke(photo)
             }
 
